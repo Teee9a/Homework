@@ -1,14 +1,21 @@
-Turtle.Hide()
 Turtle.Speed = 10
-For i = 1 To 50
-    For a = 1 To 4
-        Turtle.TurnLeft()
-        Turtle.Move(50)
-        GraphicsWindow.PenColor = "white"
+Turtle.Hide()
+TextWindow.WriteLine("Hemjeeg ogno uu?")
+hemje = TextWindow.ReadNumber()
+TextWindow.WriteLine("Heden ontsogtei boloh ve?")
+ontsog = TextWindow.ReadNumber()
+TextWindow.WriteLine("hed davtah ve?")
+davtalt = TextWindow.ReadNumber()
+angle = (ontsog - 2) * 180
+If ontsog >= 3 Then 
+    For davtal = 1 To davtalt
+        For n = 1 To ontsog 
+            zoruu = angle / ontsog
+            Turtle.Turn(180 - zoruu)
+            Turtle.Move(hemje)
+        EndFor
+        Turtle.Turn(360 / davtalt)
     EndFor
-    For b = 1 To 4
-        Turtle.TurnLeft()
-        Turtle.Move(50)
-        GraphicsWindow.PenColor = "black"
-    EndFor
-EndFor
+    Else
+        TextWindow.WriteLine("buruu")
+EndIf

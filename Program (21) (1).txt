@@ -1,0 +1,27 @@
+
+Sub d
+    a = Shapes.AddRectangle(30, 30)
+    Shapes.Move(a, x, y)
+EndSub                                                                       
+Sub tryiangle
+    b = Shapes.AddTriangle(20, 0, 0, 40, 40, 40)
+    Shapes.Move(b, x+500, y)
+    
+EndSub
+Sub player
+    p = Shapes.AddRectangle(30, 30)
+    Shapes.Move(p, px, py)
+    EndSub
+px = 150
+py = 50
+x = 1000
+y = 400
+
+d()
+tryiangle()
+For i = 1 To 100
+    Program.Delay(100)
+    x = x - 10
+    Shapes.Move(a, x+500, y)
+    Shapes.Move(b, x, y)
+EndFor
