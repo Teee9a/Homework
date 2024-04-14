@@ -1,0 +1,14 @@
+Turtle.Hide()
+Turtle.Speed = 10
+For i = 1 To 50
+    For a = 1 To 4
+        Turtle.TurnLeft()
+        Turtle.Move(50)
+        GraphicsWindow.PenColor = "white"
+    EndFor
+    For b = 1 To 4
+        Turtle.TurnLeft()
+        Turtle.Move(50)
+        GraphicsWindow.PenColor = "black"
+    EndFor
+EndFor
