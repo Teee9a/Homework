@@ -1,0 +1,14 @@
+Turtle.Speed = 10
+Sub square
+  For i = 0 To 3
+    Turtle.Move(size)
+    Turtle.TurnLeft()
+  EndFor
+EndSub
+size = 100
+For i = 0 To 10
+  if size > 0 Then
+    square()
+    size = size - 10
+  EndIf
+EndFor
